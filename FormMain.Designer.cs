@@ -37,7 +37,7 @@
             // 
             this.tbMainTrackBar.Location = new System.Drawing.Point(12, 12);
             this.tbMainTrackBar.Name = "tbMainTrackBar";
-            this.tbMainTrackBar.Size = new System.Drawing.Size(360, 45);
+            this.tbMainTrackBar.Size = new System.Drawing.Size(360, 45); // Начальный размер
             this.tbMainTrackBar.TabIndex = 0;
             // 
             // btnOpenConfig
@@ -54,17 +54,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 111);
+            this.ClientSize = new System.Drawing.Size(400, 111);
             this.Controls.Add(this.btnOpenConfig);
             this.Controls.Add(this.tbMainTrackBar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable; // Можно менять размер
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная форма с TrackBar";
+            this.Resize += new System.EventHandler(this.FormMain_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.tbMainTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
